@@ -168,7 +168,7 @@ http://35.245.106.190/dashboard.php?id=1337&code=CD56EF
 
 Now, in one of the reports: Report GH56IJ under Agent ID: 1337
 
-Codename: EliteSpud
+Codename: EliteSpud  
 Debrief: I extracted the Supreme Leader’s secret pizza-order discount code: C1{ID0R_F13LD_R3P0RT}. The pizza delivery arrived faster than any data packet.   
 
 The flag is found in the report: C1{ID0R_F13LD_R3P0RT}
