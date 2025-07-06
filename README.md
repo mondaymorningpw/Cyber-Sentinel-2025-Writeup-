@@ -11,8 +11,20 @@ Download ffprobe to explore the metadata of the audio file.
 
 Go to terminal:  
 Check if ffprobe is properly installed,   
-run command: ffprobe -version  
+Run command: ffprobe -version  
 Locate and go to the directory of ffprobe and message.mp3  
 Run command: ffprobe message.mp3  
 
 Flag is hidden in the metadata: C1{metadata_tells_more}
+
+## Hidden in Plain Sight:
+Analysts recovered a suspicious image from a threat actor’s social media account. At first glance, it looks like an innocent selfie - but insider reports suggest that a flag might be hiding in the image metadata. Can you extract it?
+
+Download exiftool to review the metadata of the selfie.  
+Go to terminal:  
+Check if exiftool is properly installed, run command: exiftool -ver  
+Locate and go to the directory of exiftool and selfie.png  
+Run command: exiftool selfie.png  
+
+Flag is hidden in the metadata: C1{smile_youre_flagged}
+
