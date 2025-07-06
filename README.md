@@ -49,4 +49,44 @@ To bypass it, I had to view the code in Notepad so it would not trigger the exec
 
 Use CyberChef to decode Base64 string to get the flag: C1{n0_d3bug_n0_p4yn}
 
+# Networking:
+
+## Packet Whisperer:
+Our blue team intercepted a network capture file. It contains unencrypted HTTP traffic. While skimming through it, analysts believe someone accidentally exposed their login credentials in plain text. Review the PCAP to find the password that the user logged in with.
+
+Use Wireshark to open this PCAP file. 
+
+Once open, right click the HTTP streams. Choose Follow > TCP Stream to view information sent across the wire.
+
+Upon closer look, we see password=C1%7Bmaybe_TLS_would_be_nice%7D
+
+The password is URL encoded, when decoded we get the flag: C1{maybe_TLS_would_be_nice}
+
+# OSINT:
+
+## Cafe Confidential:
+Two photos were posted minutes apart by someone of interest. One shows them enjoying a slice of cake in a boutique café; the other captures a well-known landmark in the background. We believe both photos were taken on the same outing. Can you determine exactly which café they visited, and where is it?
+
+Flag format is: C1{Cafe Name_Street Name}  
+For example, Tom's Cafe located at 31 Mitchell Rd, Boston, MA would be C1{Tom's_Mitchell}.
+
+Used Google’s “Search by Image” mode to find where the pictures were taken.  
+Additional use of online maps to determine if locations are closely related.   
+Based on the image of the Matilda cake and the Harrods location, and confirmed with search results, the cafe is Parker's, located at Jumeirah Lowndes Hotel, 21 Lowndes St, London SW1X 9ES, United Kingdom.
+
+The flag is: C1{Parker's_Lowndes}
+
+## Problems in North TORbia:
+We were given a ransom note but none of our files were encrypted. Regardless, could you run it back and see what information could be gleaned from it?
+
+Upon opening the note, the key line to look at in the text is:  
+SEND PAYMENT TO:  
+http://jjpwn5u6ozdmxjurfitt42hns3qovikeyhocx5b2byoxgupnuzd2vkid.onion/
+
+The URL is a .onion address.  
+Download the Tor Browser to visit the onion address.
+
+Control + U to view the source code.
+
+Flag is hidden in the source code: C1{h1dd3n_f13lds_0f_0n10ns}
 
