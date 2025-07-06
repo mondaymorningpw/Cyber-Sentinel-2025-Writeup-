@@ -147,3 +147,31 @@ Delete the line that was added: 34.86.60.228 definitelynotaflag.north.torbia
 Save file  
 Flush DNS cache by opening command prompt as administrator and using the command ipconfig /flushdns
 
+# Web Security:
+
+## Secret.txt Society:
+Our team suspects that a Juche Jaguar developer accidentally left something interesting behind on a public site. You’ve been tasked with examining its structure. Can you uncover what the bots were told to ignore? Start with the usual entry points a crawler might explore. One disallowed path leads to a page where someone left behind more than just code.
+
+Access the robots.txt file at https://juche.msoidentity.com/robots.txt 
+
+Browse to the endpoint provided in this file to gather the flag: C1{r0b0ts_arent_4lways_p0lit3}
+
+## Field Reports Mayhem:
+We've gained access to the Juche Jaguar’s Field Reports archive through an operative's use of weak credentials. Upon logging in, the operative sees their previous field reports and can file new ones. Somewhere in here, I am sure some 'leet' agent stashed the Supreme Leader's secret pizza discount code!
+Log in to the portal at: http://35.245.106.190/login.html  
+Use the credentials: 1234:spudpotato  
+
+After checking the available reports of Agent 1234, there weren't any clues to what the flag was.   
+The key was in the question “some ‘leet’ agent” therefore change the agent id from 1234 to 1337  
+1337 = leet  
+http://35.245.106.190/dashboard.php?id=1337&code=CD56EF
+
+Now, in one of the reports: Report GH56IJ under Agent ID: 1337
+
+Codename: EliteSpud
+Debrief: I extracted the Supreme Leader’s secret pizza-order discount code: C1{ID0R_F13LD_R3P0RT}. The pizza delivery arrived faster than any data packet.   
+
+The flag is found in the report: C1{ID0R_F13LD_R3P0RT}
+
+
+
