@@ -10,7 +10,8 @@ Agents intercepted an audio file named message.mp3. It plays a single tone, but 
 Download ffprobe to explore the metadata of the audio file. 
 
 Go to terminal:
-Check if ffprobe is properly installed, run command: ffprobe -version
+Check if ffprobe is properly installed, 
+run command: ffprobe -version
 Locate and go to the directory of ffprobe and message.mp3
 Run command: ffprobe message.mp3
 Flag is hidden in the metadata: C1{metadata_tells_more}
