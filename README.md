@@ -90,3 +90,60 @@ Control + U to view the source code.
 
 Flag is hidden in the source code: C1{h1dd3n_f13lds_0f_0n10ns}
 
+# Recon:
+
+## Hoasted Toasted:
+We have discovered what we believe is a North Torbian public website and have suspicions there is a secret internal-only site hidden there as well. Figure out how to connect to the hidden site and find the flag!   
+The site is at https://not-torbian.ethtrader-ai.com/  
+
+Upon clicking the link, I encountered an SSL/TLS certificate warning. I also got a “Your connection is not private” warning which got triggered because the browser doesn’t trust the website’s security certificate. For the purpose of the CTF challenge, I know it’s safe to bypass the warning to access the site.
+
+Once I got to the site, I inspected the website’s certificate details.   
+In the browser’s address bar, click the padlock icon. 
+
+In certificate details, I looked at the DNS Name.
+
+I couldn’t access the site at first https://definitelynotaflag.north.torbia/
+
+In terminal, I put the command ping not-torbian.ethtrader-ai.com to get the IP address 34.86.60.228
+
+Add it to my hosts file  
+Run Notepad as administrator  
+Open the hosts file in notepad
+
+File > Open  
+In the open dialog box, C:\Windows\System32\drivers\etc\  
+Press enter  
+Bottom right corner, look for a dropdown menu that’s probably default set to  "Text Documents (*.txt)".   
+Click on this dropdown menu and change it to "All Files (*.*)" This allows us to see the hosts file.
+
+Select the hosts file and then open it  
+Scroll down to the bottom of the file  
+Add the line 34.86.60.228 definitelynotaflag.north.torbia    
+Save the file
+
+Flush DNS cache so changes immediately take effect  
+
+Open command prompt as administrator   
+Type command ipconfig /flushdns
+
+If successful, should look something like:   
+C:\WINDOWS\system32>ipconfig /flushdns
+
+Windows IP Configuration
+
+Successfully flushed the DNS Resolver Cache.
+
+Close web browser  
+Reopen it
+
+Flag: C1{vH0st_S4n_M4g1c_R3ve4l3d}
+
+Note:  
+For best practice, remove the custom entry from the hosts file once it’s no longer needed.    
+Run notepad as administrator  
+Open hosts file  
+Delete the line that was added: 34.86.60.228 definitelynotaflag.north.torbia  
+Save file  
+Flush DNS cache by opening command prompt as administrator and using the command ipconfig /flushdns
+
